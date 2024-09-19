@@ -1,0 +1,13 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run lint checks
+        run: npm install eslint && npx eslint *.js
+      - name: Run unit tests
+        run: npm test
