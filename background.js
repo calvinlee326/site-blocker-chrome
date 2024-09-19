@@ -15,4 +15,4 @@ chrome.webRequest.onBeforeRequest.addListener(
     },
     {urls: ["<all_urls>"]},
     ["blocking"]
-)
+);
